@@ -1,7 +1,7 @@
 # Ubuntu 14.04 LTS
 # Oracle Java 1.8.0_11 64 bit
 # Maven 3.2.2
-# Jenkins 1.580
+# Jenkins 1.651
 # git 1.9.1
 # Nano 2.2.6-1ubuntu1
 
@@ -56,7 +56,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
 RUN update-alternatives --install /usr/bin/java java $JAVA_HOME/bin/java 20000 && update-alternatives --install /usr/bin/javac javac $JAVA_HOME/bin/javac 20000
 
 # copy jenkins war file to the container
-ADD http://mirrors.jenkins-ci.org/war/1.580/jenkins.war /opt/jenkins.war
+ADD http://mirrors.jenkins-ci.org/war/1.651/jenkins.war /opt/jenkins.war
 RUN chmod 644 /opt/jenkins.war
 ENV JENKINS_HOME /jenkins
 
